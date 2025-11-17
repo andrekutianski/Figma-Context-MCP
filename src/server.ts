@@ -176,7 +176,7 @@ export async function startHttpServer(port: number, mcpServer: McpServer): Promi
     }
   });
 
-  httpServer = app.listen(port, "127.0.0.1", () => {
+  httpServer = app.listen(port, () => {
     Logger.log(`HTTP server listening on port ${port}`);
     Logger.log(`SSE endpoint available at http://localhost:${port}/sse`);
     Logger.log(`Message endpoint available at http://localhost:${port}/messages`);
